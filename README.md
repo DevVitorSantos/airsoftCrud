@@ -1,8 +1,14 @@
-# React + Vite
+# Airsfot project 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Want create a airsoft game ? 
+This project can help to get there without using complex tools or whatsapp
+groups , lets do it?
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Legal airsoft ](https://static.wixstatic.com/media/9a6344_a467d195f83540188a2068265600d423~mv2.jpg/v1/crop/x_277,y_0,w_4022,h_1959/fill/w_640,h_312,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/criadas%20para%20evoluir.jpg "Let's play")]
+
+Atually check the guides:
+
+- guides 01 ( https://google.com)
+- [guides 02] ( https://google.com) 
+
