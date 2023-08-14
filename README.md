@@ -1,6 +1,6 @@
 # Airsfot project 
 
-Want create a airsoft game ? 
+Want create a airsoft game ? <br/>
 This project can help to get there without using complex tools or whatsapp
 groups , lets do it?
 
@@ -11,4 +11,19 @@ Atually check the guides:
 
 - guides 01 ( https://google.com)
 - [guides 02] ( https://google.com) 
+
+
+## Technologys in this project
+- react
+- react router dom
+- context
+- firebase
+- user autentication
+
+## Contact
+
+email: vitorsantos.seo@gmail.com
+
+### This readme use's markdown
+using markdown to config the read me
 
