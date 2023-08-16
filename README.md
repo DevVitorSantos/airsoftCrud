@@ -14,6 +14,7 @@ Atually check the guides:
 
 
 ## Technologys in this project
+
 - react
 - react router dom
 - context
@@ -25,5 +26,6 @@ Atually check the guides:
 email: vitorsantos.seo@gmail.com
 
 ### This readme use's markdown
+
 using markdown to config the read me
 
