@@ -15,8 +15,8 @@ const NavBar = () => {
     <div className='nav-container'>
       
       <NavLink to='/' className='logo'>
-        Airsoft <span>House</span>
-      
+        
+        <img src="https://www.vitoriaparkshopping.com/wp-content/uploads/2020/01/logo-airsoft.png" alt="" />
       </NavLink>
 
       <ul className='lista'>
