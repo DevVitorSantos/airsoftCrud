@@ -9,10 +9,11 @@ const NavBar = () => {
   const { user } = useAuthValue() 
   const { logout } = HookUseAutentication()
 
+  console.log(user)
 
   return (
     <div className='nav-container'>
-
+      
       <NavLink to='/' className='logo'>
         Airsoft <span>House</span>
       
@@ -32,6 +33,23 @@ const NavBar = () => {
             Sobre
           </NavLink>
         </li>
+
+        { user && (
+          <>
+            <li>
+              <NavLink to='/dashboard'
+              className={( {isActive}) => (isActive ? styles.active : "")}>
+                Dashboard
+              </NavLink>
+            </li>
+
+            <li>
+            <a onClick={logout}>Sair</a>
+            </li>
+          
+          </>
+          
+        )}
         
         {!user && (
             <li>
@@ -42,12 +60,11 @@ const NavBar = () => {
             </li>
         )}
         
+        <span className='nav-userImage' >
+          <img src={user ? ( user.photoURL )  : 'https://icon-library.com/images/anonymous-user-icon/anonymous-user-icon-12.jpg'} alt="" />
+        </span>
 
-        {user && (
-          <li>
-            <a onClick={logout}>Sair</a>
-          </li>
-        )}
+       
       </ul>
     </div>
   )

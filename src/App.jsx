@@ -22,6 +22,7 @@ import { HookUseAutentication } from './hooks/HookUseAutentication';
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Login from './pages/Login/Login'
+import Dashboard from './pages/Dashboard/Dashboard';
 
 
 
@@ -58,6 +59,10 @@ function App() {
               <Route 
                 path='/login' 
                 element={!user ? <Login/> : <Navigate to="/"/>} />
+
+              <Route 
+                path='/dashboard' 
+                element={user ? <Dashboard/> : <Navigate to="/login"/>} />
             </Routes>
         </div>
 
