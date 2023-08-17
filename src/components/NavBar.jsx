@@ -9,7 +9,7 @@ const NavBar = () => {
   const { user } = useAuthValue() 
   const { logout } = HookUseAutentication()
 
-  console.log(user)
+  
 
   return (
     <div className='nav-container'>

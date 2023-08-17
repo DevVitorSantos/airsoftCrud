@@ -23,6 +23,7 @@ import Home from './pages/Home/Home'
 import About from './pages/About/About'
 import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard/Dashboard';
+import CreateGame from './pages/CreateGame/CreateGame';
 
 
 
@@ -58,11 +59,17 @@ function App() {
               {/* Private Routes */}
               <Route 
                 path='/login' 
-                element={!user ? <Login/> : <Navigate to="/"/>} />
+                element={!user ? <Login/> : <Navigate to="/dashboard"/>} />
+
+              
 
               <Route 
                 path='/dashboard' 
                 element={user ? <Dashboard/> : <Navigate to="/login"/>} />
+
+              <Route 
+                path='/games/create' 
+                element={user ? <CreateGame/> : <Navigate to="/login"/>} />
             </Routes>
         </div>
 
