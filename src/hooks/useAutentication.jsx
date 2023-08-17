@@ -9,7 +9,7 @@ import {
 
 import { useState, useEffect } from 'react'
 
-export const HookUseAutentication = () => {
+export const useAutentication = () => {
   
   const [ error, setError] = useState(null)
   const [loading, setLoading] = useState(null)

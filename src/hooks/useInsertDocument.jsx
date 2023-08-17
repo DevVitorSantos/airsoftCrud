@@ -23,7 +23,7 @@ const insertReducer = ( state, action ) => {
   }
 }
 
-export const HookUseInsertDocument = (docCollection) => {
+export const useInsertdocument = (docCollection) => {
   const [ response, dispatch ] = useReducer(insertReducer, initialState)
 
   //deal with memory leak
@@ -67,13 +67,14 @@ export const HookUseInsertDocument = (docCollection) => {
 
     }
 
-    // memory leak again
-    useEffect( () => {
-      return () => setCancelled(true)
-    },[])
-    }
+  }
 
-    return { insertDocument, response}
+  // memory leak again
+  useEffect( () => {
+    return () => setCancelled(true)
+  },[])
+
+  return { insertDocument, response}
 
 }
 

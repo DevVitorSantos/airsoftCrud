@@ -3,7 +3,7 @@ import styles from './CreateGame.css'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuthValue } from '../../context/AuthContext'
-import { HookUseInsertDocument } from '../../hooks/HookUseInsertDocument'
+import { useInsertdocument } from '../../hooks/useInsertDocument'
 
 
 const CreateGame = () => {
@@ -20,7 +20,7 @@ const CreateGame = () => {
   const [formError, setFormError] = useState("")
 
   // extract hook db and create a table
-  const { insertDocument, response} = HookUseInsertDocument("eventosAirsoft")
+  const { insertDocument, response} = useInsertdocument("eventosAirsoft")
 
   // extract user info
   const {user} = useAuthValue()

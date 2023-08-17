@@ -1,7 +1,7 @@
 import styles from './Login.css'
 
 import { useState, useEffect } from 'react'
-import { HookUseAutentication } from '../../hooks/HookUseAutentication'
+import { HookUseAutentication } from '../../hooks/useAutentication'
 
 const Login = () => {
 

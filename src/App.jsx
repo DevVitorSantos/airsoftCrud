@@ -16,7 +16,7 @@ import Footer from './components/Footer'
 import { AuthProvider } from './context/AuthContext'
 
 /* Hooks */
-import { HookUseAutentication } from './hooks/HookUseAutentication';
+import { useAutentication } from './hooks/useAutentication';
 
 /* Pages */
 import Home from './pages/Home/Home'
@@ -29,7 +29,7 @@ import CreateGame from './pages/CreateGame/CreateGame';
 
 function App() {
   const [ user, setUser ] = useState(undefined)
-  const { auth } = HookUseAutentication()
+  const { auth } = useAutentication()
 
   const loadingUser = user === undefined
 
