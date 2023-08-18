@@ -32,7 +32,8 @@ const CreateGame = () => {
     e.preventDefault()
     setFormError("")
   
-    const DocPronto = {
+
+    insertDocument( {
       nomeEvento,
       descricaoEvento,
       imgEvento,
@@ -42,9 +43,7 @@ const CreateGame = () => {
       createdBy: user.displayName,
       emailResponsavel: user.email,
       participantes: []
-    }
-
-    insertDocument( {DocPronto})
+    })
 
     
 

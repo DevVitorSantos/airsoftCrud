@@ -1,7 +1,7 @@
 import styles from './Login.css'
 
 import { useState, useEffect } from 'react'
-import { HookUseAutentication } from '../../hooks/useAutentication'
+import { useAutentication } from '../../hooks/useAutentication'
 
 const Login = () => {
 
@@ -12,7 +12,7 @@ const Login = () => {
     loading,
     tryLoginwithGoogle,
     logout
-  } = HookUseAutentication()
+  } = useAutentication()
 
 
   useEffect(() => {
