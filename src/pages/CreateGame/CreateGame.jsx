@@ -1,10 +1,10 @@
 import styles from './CreateGame.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuthValue } from '../../context/AuthContext'
 import { useInsertdocument } from '../../hooks/useInsertDocument'
-
+import data from './data'
 
 const CreateGame = () => {
 
@@ -15,6 +15,7 @@ const CreateGame = () => {
   const [nomeDoCampo, setNomeDoCampo] = useState("")
   const [linkGrupoWpp, setLinkGrupoWpp] = useState("")
   const [statusEvento, setStatusEvento] = useState("")
+  const [tags, setTags] = useState([])
   const [participantes, setParticipantes] = useState([])
   
   const [formError, setFormError] = useState("")
@@ -32,6 +33,20 @@ const CreateGame = () => {
     e.preventDefault()
     setFormError("")
   
+     // validate image
+     try {
+      new URL(image);
+    } catch (error) {
+      setFormError("A imagem precisa ser uma URL.");
+    }
+
+    // create tags array
+    const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
+
+    // check values
+    if (!nomeEvento || !imgEvento || !tags || !descricaoEvento) {
+      setFormError("Por favor, preencha todos os campos!");
+    }
 
     insertDocument( {
       nomeEvento,
@@ -42,7 +57,8 @@ const CreateGame = () => {
       uid: user.uid,
       createdBy: user.displayName,
       emailResponsavel: user.email,
-      participantes: []
+      participantes: [],
+      tags: tagsArray
     })
 
     
@@ -52,6 +68,27 @@ const CreateGame = () => {
     
   }
 
+ 
+  {/* 
+
+  useEffect( () => {
+    data.map( item => {
+      insertDocument( {
+        nomeEvento: item.nomeEvento,
+        descricaoEvento: item.descricaoEvento,
+        imgEvento: item.imgEvento,
+        linkGrupoWpp: item.linkGrupoWpp,
+        nomeDoCampo: item.nomeDoCampo,
+        uid: user.uid,
+        createdBy: user.displayName,
+        emailResponsavel: user.email,
+        participantes: [],
+        tags: item.tags
+      })
+    })
+  }, [])
+  console.log('consigo ver data? ' , data)
+  */}
 
 
   return (
@@ -130,6 +167,17 @@ const CreateGame = () => {
             </select>
 
             
+          </label>
+
+          <label>
+            <span>Tags para facilitar a busca:</span>
+            <input 
+              type="text"
+              name='tags'
+              placeholder='tags separadas por virgula'
+              onChange={(e) => setTags(e.target.value)}
+              value={tags} 
+            />
           </label>
 
         <button className='btn'>Enviar</button>

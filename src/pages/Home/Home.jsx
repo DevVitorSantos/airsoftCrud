@@ -13,6 +13,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   
+  
 
   const handleSubmit = (e) =>{
     e.preventDefault()
@@ -26,6 +27,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <h1>Veja os nossos posts mais recentes</h1>
+     
       <form onSubmit={handleSubmit} className={styles.search_form}>
         <input 
           type="text"
@@ -37,12 +39,13 @@ const Home = () => {
         </button>
       </form>
 
+
+      
+
       <div>
         {loading && <p>Carregando...</p>}
         {eventos && eventos.map( (evento) => (
-          <p >{evento.nomeEvento
-           
-            }</p>
+          <p key={evento.id}>{evento.nomeEvento}</p>
           
         ))}
 
