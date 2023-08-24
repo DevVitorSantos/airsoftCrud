@@ -1,0 +1,15 @@
+.banner{
+    height: 10em;
+    display: flex;   
+    background-color: beige;
+}
+
+.banner div{
+    margin-top: -1em;
+    margin-left: 2em;
+}
+
+.banner img{
+    opacity: 0.8;
+    height: 100%;
+}

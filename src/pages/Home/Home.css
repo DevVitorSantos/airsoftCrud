@@ -1,0 +1,38 @@
+.home-container{
+
+}
+
+
+.home-form{
+    margin-top: 2em;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-around;
+    border-bottom: 3px solid rgb(32, 27, 27);
+    padding-bottom: 1em;
+}
+.form-container form{
+    width: 20em;
+   
+    margin-left: 8em;
+}
+
+.form-container div{
+    width: 30em;
+    
+    margin-right: 25em;
+    margin-top: 2em;
+}
+
+.grid-home {
+    display: grid;
+    grid-column-gap: 1px;
+    grid-row-gap: 12px;
+    grid-template-columns: repeat(3, auto);
+    margin-top: 2em;
+  }
+

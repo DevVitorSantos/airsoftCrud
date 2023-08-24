@@ -1,9 +1,15 @@
 import styles from './Home.css'
 
+// components
+import Banner from '../../components/Banner'
+import Card from '../../components/Card'
+
 // hooks import
 import { useNavigate, Link } from "react-router-dom"
 import { useState } from "react"
 import { useFechdocuments } from "../../hooks/useFechdocuments"
+
+
 
 
 const Home = () => {
@@ -25,32 +31,41 @@ const Home = () => {
 
 
   return (
-    <div className={styles.home}>
-      <h1>Veja os nossos posts mais recentes ! atualizado</h1>
+    <div className='home-container'>
+      
+     <Banner titulo={'Home Page'} descricao={'Veja mais sobre nossos produtos'}/>
+      
      
-      <form onSubmit={handleSubmit} className={styles.search_form}>
-        <input 
-          type="text"
-          placeholder="Ou busque por Tags..."
-          onChange={(e) => setQuery(e.target.value)}/>
+      <div className="form-container">
+        <form onSubmit={handleSubmit} className='home-form'>
+          <input 
+            type="text"
+            placeholder="Ou busque por Tags..."
+            onChange={(e) => setQuery(e.target.value)}/>
 
-        <button className="btn btn-dark">
-          Pesquisar
-        </button>
-      </form>
+          <button className="btn btn-dark">
+            Pesquisar
+          </button>
+        </form>
+        <div>
+          Campos mais buscados: Arena B13 , CT Fantasma
+        </div>
+
+      </div>
+      
 
 
       
 
-      <div>
+      <div className='grid-home'>
         {loading && <p>Carregando...</p>}
         {eventos && eventos.map( (evento) => (
-          <p key={evento.id}>{evento.nomeEvento}</p>
           
+            <Card evento={evento} /> 
         ))}
 
         {eventos && eventos.length === 0 && (
-          <div className={styles.noposts}> 
+          <div className=''> 
             <p>Não foram encontrados Eventos</p>
             <Link 
               to="/dashboard"

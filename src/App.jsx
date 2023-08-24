@@ -25,6 +25,7 @@ import Login from './pages/Login/Login'
 import Dashboard from './pages/Dashboard/Dashboard';
 import CreateGame from './pages/CreateGame/CreateGame';
 import Search from './pages/Search/Search';
+import ViewGame from './pages/ViewGame/ViewGame';
 
 
 
@@ -56,6 +57,7 @@ function App() {
               <Route path='/' element={<Home/>} />
               <Route path='/sobre' element={<About/>} />
               <Route path="/search" element={<Search />} />
+              <Route path="/eventos/view/:id" element={<ViewGame />} />
               
               {/* Private Routes */}
               <Route 
