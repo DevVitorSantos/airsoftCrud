@@ -5,3 +5,27 @@
 .dashboard-container a{
   
 }
+
+.controller{
+    display: flex;
+    margin: 1em auto;
+    background-color:aliceblue;
+    height: 15em;
+    flex: 1;
+}
+
+.controller .controller-data{
+    width: 50%;
+    height: 100%;
+    
+    flex:1;
+    padding: 1em;
+}
+
+.controller .controller-access{
+    width: 50%;
+    height: 100%;
+    border-left: 1px solid #ccc;
+    flex:1;
+    padding: 1em;
+}

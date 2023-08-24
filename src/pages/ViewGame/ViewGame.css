@@ -14,3 +14,23 @@
 .viewgame-container .tags p{
     margin-left: .5em;
 }
+
+.box{
+    display: flex;
+}
+
+.box .form{
+    
+    background-color: #ccc;
+    opacity: 90%;
+    margin-left: 2em;
+    margin-top: -8em;
+    padding: .3em;
+    width: 13em;
+}
+
+.box .form label{
+    
+    
+    flex: 1;
+}

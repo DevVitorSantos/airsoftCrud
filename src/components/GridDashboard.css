@@ -1,0 +1,26 @@
+
+.container{
+    margin-top: 3em;
+}
+
+.grid-Dashboard-container{
+    width: 80%;
+    background-color: aliceblue;
+    
+    margin: 1em auto;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1em;
+    
+
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    
+}
+
+.grid-Dashboard-container h2{
+    font-size: 15px;
+}

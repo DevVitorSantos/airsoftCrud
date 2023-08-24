@@ -1,3 +1,4 @@
+import styles from './Dashboard.css'
 
 import React from 'react'
 import { NavLink } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { useAuthValue } from '../../context/AuthContext'
 import { useFechdocuments } from '../../hooks/useFechdocuments'
 
 import Banner from '../../components/Banner'
+import GridDashboard  from '../../components/GridDashboard';
 
 const Dashboard = () => {
 
@@ -18,22 +20,31 @@ const Dashboard = () => {
   return (
     <div className='dashboard-container'>
 
-      <Banner titulo={'Dashboard'} descricao={'Pronto para gerenciar seus eventos?'}/>
+      <Banner titulo={'Dashboard , ' + user.displayName} descricao={'Pronto para gerenciar seus eventos?'}/>
 
-      <h2>{user && user.displayName },<br/> conheça seu dashboard</h2>
-      <p>Aqui você terá controle de todas as suas atividades, eventos e relatórios</p>
+      <div className="controller">
+        <div className="controller-data">
+          <h3>Dados de Faturamento Geral</h3>
+        </div>
+        <div className="controller-access">
+          <h3>Acessos Rápidos</h3>
+
+          <NavLink to='/games/create'
+            className='btn'>
+            Criar Game
+          </NavLink>
+        </div>
+      </div>
+
 
       
 
-      <NavLink to='/games/create'
-          className='btn'>
-            Criar Game
-      </NavLink>
+      
 
-      <div>
+      <div className='container'>
         {eventos && eventos.map( (evento) => (
-          <p key={evento.id}>{evento.nomeEvento}</p>
           
+          <GridDashboard evento={evento}/>
         ))}
       </div>
     </div>
