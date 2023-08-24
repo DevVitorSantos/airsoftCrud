@@ -24,13 +24,19 @@ const Login = () => {
 
   return (
     <div className='login-container'>
-      <h2>Faça seu login</h2>
-      <p>Faça o login para poder utilizar o sistema</p>
+      <div className="left-side">
+        
+      </div>
+      <div className="right-side">
+        <h2>Faça seu login</h2>
+        <p>Faça o login para poder utilizar o sistema</p>
 
-      {error && <p className='error'>{error}</p>}
-      {!loading && 
-        <a className='btn' onClick={tryLoginwithGoogle}>Login Google</a>
-        }
+        {error && <p className='error'>{error}</p>}
+        {!loading && 
+          <a className='btn' onClick={tryLoginwithGoogle}>Login Google</a>
+          }
+      </div>
+      
     </div>
   )
 }

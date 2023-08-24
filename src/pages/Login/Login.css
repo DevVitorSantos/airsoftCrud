@@ -1,5 +1,55 @@
 .login-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  max-width: 45em;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: 30em;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    flex-direction: column-reverse;
+  }
+}
+
+.login-container .left-side{
+  height: 100%;
+  
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://as1.ftcdn.net/v2/jpg/05/95/36/06/1000_F_595360635_9g9F3HKCGyjN5zdh98b672I3WWRBAKgs.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: .3em;
+  width: 60%;
+}
+
+.login-container .right-side{
+  padding: .3em;
+  width: 35%;
+  background-color: rgba(252, 252, 252, 0.945);
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.login-container .right-side h2{
+
+}
+
+.login-container .right-side p{
+  text-align: center;
+}
+
+.login-container .right-side .btn{
+  
 }
