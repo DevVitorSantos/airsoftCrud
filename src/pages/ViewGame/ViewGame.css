@@ -1,0 +1,16 @@
+.viewgame-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.viewgame-container .descricao{
+    max-width: 34em;
+}
+.viewgame-container .tags{
+    display: flex;
+}
+
+.viewgame-container .tags p{
+    margin-left: .5em;
+}

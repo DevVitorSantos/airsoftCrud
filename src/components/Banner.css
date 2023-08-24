@@ -1,7 +1,7 @@
 .banner{
     height: 10em;
     display: flex;   
-    background-color: beige;
+    background-color: #ccc;
 }
 
 .banner div{

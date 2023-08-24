@@ -1,6 +1,20 @@
 .grid-card{
     width: 25em;
     height: 20em;
-    background-color: blue;
     
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-card h3{ 
+    text-align: center;
+}
+.grid-card img{
+    width: 100%;
+}
+
+.grid-card .btn{
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
 }

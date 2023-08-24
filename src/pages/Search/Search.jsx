@@ -5,8 +5,13 @@ import { useState } from 'react'
 import { useFechdocuments } from '../../hooks/useFechdocuments'
 import { useQuery } from '../../hooks/useQuery'
 
-//components
+
 import { Link } from 'react-router-dom'
+
+
+// components
+import Banner from '../../components/Banner'
+import Card from '../../components/Card'
 
 
 
@@ -21,12 +26,18 @@ const Search = () => {
 
     return (
         <div>
-            <h2> seja bem vindo </h2>
-            <p>sua busca foi == {search}</p>
+            <Banner titulo={'Configura sua Busca'} />
 
             <div>
+                {!eventos  && (
+                    <p>Não foram encontrados conteúdos com a sua busca - {search}</p>
+                )}
+            </div>
+
+            <div className='grid-search'>
                 {eventos && eventos.map( (evento) => (
-                 <p key={evento.id}>{evento.nomeEvento }</p>
+                    <Card evento={evento} key={evento.id}/>
+                 
           
                 ))}
 

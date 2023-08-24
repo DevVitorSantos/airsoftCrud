@@ -61,7 +61,7 @@ const Home = () => {
         {loading && <p>Carregando...</p>}
         {eventos && eventos.map( (evento) => (
           
-            <Card evento={evento} /> 
+            <Card evento={evento} key={evento.id}/> 
         ))}
 
         {eventos && eventos.length === 0 && (

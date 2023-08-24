@@ -1,8 +1,8 @@
-#1 criar card de visualização de produtos na home
+#1 criar card de visualização de produtos na home @@@
 
-#2 clonar grid para página de search ( utilize nosso banner )
+#2 clonar grid para página de search ( utilize nosso banner ) @@@
 
-#3 criar página de visualização de eventos públicos ( utilize nosso banner )
+#3 criar página de visualização de eventos públicos ( utilize nosso banner ) @@@
 
 #4 criar pagina dashboard listagem
     form de edicao
