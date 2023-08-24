@@ -1,20 +1,39 @@
 .grid-card{
-    width: 25em;
-    height: 20em;
-    
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .grid-card h3{ 
-    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 .grid-card img{
-    width: 100%;
+    max-width: 100%;
+    max-height: 70%;
+    border-radius: 4px;
 }
 
 .grid-card .btn{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
     margin: 0 auto;
-    position: relative;
-    top: -50px;
+}
+
+.grid-card .btn:hover{
+    background-color: #0056b3;
 }

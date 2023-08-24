@@ -29,10 +29,11 @@
 }
 
 .grid-home {
-    display: grid;
-    grid-column-gap: 1px;
-    grid-row-gap: 12px;
-    grid-template-columns: repeat(3, auto);
-    margin-top: 2em;
-  }
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f4f4f4;
+} 
 

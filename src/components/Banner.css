@@ -2,6 +2,11 @@
     height: 10em;
     display: flex;   
     background-color: #ccc;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1610165539750-051008c3e799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80') repeat-x;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 2em;
 }
 
 .banner div{
