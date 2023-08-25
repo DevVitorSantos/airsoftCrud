@@ -2,25 +2,61 @@
 import styles from './ViewGame.css'
 
 // hooks
+import { useState, useEffect } from "react"
 import { useFetchDocument } from "../../hooks/useFechDocument"
 import { useParams,useNavigate } from "react-router-dom"
 import { useUpdateDocument } from '../../hooks/useUpdateDocument'
 import { useAuthValue } from '../../context/AuthContext'
-import { useState, useEffect } from "react";
+
 
 //components
 import Banner from '../../components/Banner';
+
+
+
+
 
 
 const ViewGame = () => {
 
     const { id } = useParams();
     const {document: evento} = useFetchDocument("eventosAirsoft", id)
-
+    const { updateDocument, response } = useUpdateDocument("eventosAirsoft")
+    const navigate = useNavigate()
+    
     console.log('trouxe meu evento' ,  evento)
+
+
+    // extract user info
+    const {user} = useAuthValue()
+
+    /* create form inputs spaces */
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+         
+
+        const data = {
+            nomeEvento: evento.nomeEvento,
+            participantes: [...evento.participantes , 
+                {
+                    name: name,
+                    email: email,
+                    user: user.uid
+                }
+            ]
+            
+        }
+
+        
+        updateDocument(id, data)
+
+        // redirect to home page
+        navigate("/dashboard")
     }   
 
     return(
@@ -56,13 +92,15 @@ const ViewGame = () => {
                                     <label>
                                         Nome:
                                         <input type="text" 
-                                            name="" 
+                                            name={name} 
+                                            onChange={(e) => setName(e.target.value)}
                                             placeholder='Digite seu nome'/>
                                     </label>
                                     <label>
                                         Email:
                                         <input type="email" 
-                                            name="" 
+                                            name={email} 
+                                            onChange={(e) => setEmail(e.target.value)}
                                             placeholder='Digite seu email'/>
                                     </label>
 
