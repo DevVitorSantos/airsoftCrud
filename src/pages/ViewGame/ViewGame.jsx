@@ -3,9 +3,13 @@ import styles from './ViewGame.css'
 
 // hooks
 import { useFetchDocument } from "../../hooks/useFechDocument"
-import { useParams } from "react-router-dom"
-import Banner from '../../components/Banner';
+import { useParams,useNavigate } from "react-router-dom"
+import { useUpdateDocument } from '../../hooks/useUpdateDocument'
+import { useAuthValue } from '../../context/AuthContext'
+import { useState, useEffect } from "react";
 
+//components
+import Banner from '../../components/Banner';
 
 
 const ViewGame = () => {

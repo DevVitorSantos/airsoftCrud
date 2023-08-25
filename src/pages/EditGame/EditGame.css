@@ -1,0 +1,10 @@
+.editGame-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .editGame-container form{
+    margin-top: 3em;
+  }

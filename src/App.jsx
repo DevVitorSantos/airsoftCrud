@@ -26,6 +26,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import CreateGame from './pages/CreateGame/CreateGame';
 import Search from './pages/Search/Search';
 import ViewGame from './pages/ViewGame/ViewGame';
+import EditGame from './pages/EditGame/EditGame';
 
 
 
@@ -69,6 +70,10 @@ function App() {
               <Route 
                 path='/dashboard' 
                 element={user ? <Dashboard/> : <Navigate to="/login"/>} />
+
+              <Route 
+                path='/eventos/edit/:id' 
+                element={user ? <EditGame/> : <Navigate to="/login"/>} />
 
               <Route 
                 path='/games/create' 

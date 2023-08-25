@@ -14,9 +14,13 @@ const GridDashboard = ({evento}) => {
 
             <div>
                 Gerenciar |
-                Editar |
+                
+                <Link to={`/eventos/edit/${evento.id} `} className="">
+                    Editar |
+                </Link>
+                
                 <Link to={`/eventos/view/${evento.id} `} className="">
-                Ir página do Evento
+                    Ir página do Evento
                 </Link>
                 
             </div>
