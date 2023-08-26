@@ -34,6 +34,13 @@ const ViewGame = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
 
+    console.log(user)
+    // fill automatic form
+    useEffect( () => {
+        setName(user && user.displayName)
+        setEmail(user && user.email)
+    },[user])
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -93,6 +100,7 @@ const ViewGame = () => {
                                         Nome:
                                         <input type="text" 
                                             name={name} 
+                                            value={name}
                                             onChange={(e) => setName(e.target.value)}
                                             placeholder='Digite seu nome'/>
                                     </label>
@@ -100,6 +108,7 @@ const ViewGame = () => {
                                         Email:
                                         <input type="email" 
                                             name={email} 
+                                            value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             placeholder='Digite seu email'/>
                                     </label>
