@@ -1,12 +1,13 @@
 import styles from './About.css'
 import { Navigate, Link } from 'react-router-dom'
 
-import React from 'react'
+
 import Banner from '../../components/Banner'
+
 
 const About = () => {
   return (
-    <div>
+    <div className='about-container'>
       <Banner titulo={'Sobre AirsoftGame'}/>
       <h2>AirsoftGame: Sua Plataforma Completa para Gerenciamento de Eventos de Airsoft</h2>
 

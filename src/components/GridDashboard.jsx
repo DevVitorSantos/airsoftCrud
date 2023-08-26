@@ -12,7 +12,7 @@ const GridDashboard = ({evento}) => {
             
 
 
-            <div>
+            <div className='btns'>
                 <Link to={`/eventos/gerenciar/${evento.id} `} className="">
                     Gerenciar |
                 </Link>

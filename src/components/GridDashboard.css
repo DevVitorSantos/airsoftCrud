@@ -24,3 +24,14 @@
 .grid-Dashboard-container h2{
     font-size: 15px;
 }
+
+/* max device width */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)  {
+    .grid-Dashboard-container{
+        
+        flex-direction: column;
+        
+    }
+    
+}

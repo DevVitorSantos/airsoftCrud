@@ -19,3 +19,14 @@
     opacity: 0.8;
     height: 100%;
 }
+
+/* max device width */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .banner h2{
+        font-size: 17px;
+    }
+    .banner {
+       text-overflow:unset;
+    }
+}

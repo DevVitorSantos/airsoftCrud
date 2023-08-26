@@ -7,7 +7,7 @@ const Banner = ({ titulo, descricao}) => {
             <div>
             <h2>{titulo} </h2>
             <p> {descricao}</p>
-            <p> lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum</p>
+            
             </div>
       </div>
 

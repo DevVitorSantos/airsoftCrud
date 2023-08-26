@@ -47,7 +47,7 @@ const Home = () => {
             Pesquisar
           </button>
         </form>
-        <div>
+        <div className='itens-tags'>
           Campos mais buscados: Arena B13 , CT Fantasma
         </div>
 

@@ -34,3 +34,14 @@
     
     flex: 1;
 }
+
+/* max device width */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+    .viewgame-container .tags{
+        margin-left: 1.3em;
+    }
+    .viewgame-container .descricao{
+        padding: 0px 2em;
+    }
+}
