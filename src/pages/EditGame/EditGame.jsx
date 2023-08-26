@@ -40,7 +40,6 @@ const EditGame = () => {
         setNomeDoCampo(evento.nomeDoCampo)
         setLinkGrupoWpp(evento.linkGrupoWpp)
         setStatusEvento(evento.statusEvento)
-        setParticipantes(evento.participantes)
 
         const textTags = evento.tags.join(", ")
         setTags(textTags)
