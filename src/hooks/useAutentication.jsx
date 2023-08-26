@@ -35,7 +35,7 @@ export const useAutentication = () => {
     try {
       const {user} = await signInWithPopup( auth,provider)
       setLoading(false)
-      console.log(user)
+      //console.log(user)
       return user
 
     } catch (error) {

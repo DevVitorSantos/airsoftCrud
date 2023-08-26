@@ -12,7 +12,7 @@ const EditGame = () => {
     const { document: evento } = useFetchDocument( 'eventosAirsoft', id)
     const { updateDocument, response } = useUpdateDocument("eventosAirsoft");
 
-    console.log( 'cade nosso evento? ' , evento)
+    //console.log( 'cade nosso evento? ' , evento)
 
   // extract user info
   const {user} = useAuthValue()

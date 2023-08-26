@@ -15,7 +15,7 @@ const Dashboard = () => {
   const uid = user.uid
   const {documents: eventos} = useFechdocuments("eventosAirsoft", null, uid)
 
-  console.log('eventos dashboard' , eventos )
+  //console.log('eventos dashboard' , eventos )
 
   return (
     <div className='dashboard-container'>
@@ -44,7 +44,7 @@ const Dashboard = () => {
       <div className='container'>
         {eventos && eventos.map( (evento) => (
           
-          <GridDashboard evento={evento}/>
+          <GridDashboard evento={evento} key={evento.id}/>
         ))}
       </div>
     </div>

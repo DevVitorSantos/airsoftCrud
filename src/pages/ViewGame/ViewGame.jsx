@@ -24,7 +24,7 @@ const ViewGame = () => {
     const { updateDocument, response } = useUpdateDocument("eventosAirsoft")
     const navigate = useNavigate()
     
-    console.log('trouxe meu evento' ,  evento)
+    //console.log('trouxe meu evento' ,  evento)
 
 
     // extract user info
