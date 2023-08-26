@@ -125,6 +125,10 @@ const EditGame = () => {
             />
           </label>
 
+          <label >
+          <span>Preview da Imagem:</span>
+            <img src={imgEvento} ></img>
+          </label>
           
 
           <label>

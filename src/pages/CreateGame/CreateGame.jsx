@@ -129,7 +129,10 @@ const CreateGame = () => {
             />
           </label>
 
-          
+          <label >
+          <span>Preview da Imagem:</span>
+            <img src={imgEvento} ></img>
+          </label>
 
           <label>
             <span>Link do Grupo de Whatsapp:</span>
