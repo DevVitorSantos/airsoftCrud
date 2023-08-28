@@ -34,7 +34,7 @@ const ViewGame = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
 
-    console.log(user)
+    //console.log(user)
     // fill automatic form
     useEffect( () => {
         setName(user && user.displayName)
