@@ -25,6 +25,37 @@
     font-size: 15px;
 }
 
+.btns{
+    display: flex;
+    margin-right: 20px;
+}
+.btn-gerenciar, .btn-editar, .btn-ver{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: #333;
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+.btn-gerenciar{
+    background: url('https://www.svgrepo.com/show/343430/options-preferences-settings-2.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-editar{
+    background: url('https://www.svgrepo.com/show/505369/edit-4.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.btn-ver{
+    background: url('https://www.svgrepo.com/show/447726/open-link.svg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 /* max device width */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px)  {

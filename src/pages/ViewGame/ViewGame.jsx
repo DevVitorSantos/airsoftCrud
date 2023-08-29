@@ -29,6 +29,7 @@ const ViewGame = () => {
 
     // extract user info
     const {user} = useAuthValue()
+   
 
     /* create form inputs spaces */
     const [name, setName] = useState('')
@@ -62,6 +63,8 @@ const ViewGame = () => {
         
         updateDocument(id, data)
 
+        
+        
         // redirect to home page
         navigate("/dashboard")
     }   

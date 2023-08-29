@@ -34,6 +34,7 @@ import MenuBurger from './components/MenuBurger';
 
 function App() {
   const [ user, setUser ] = useState(undefined)
+  
   const { auth } = useAutentication()
 
   const loadingUser = user === undefined
@@ -43,6 +44,8 @@ function App() {
       setUser(user)
     })
   }, [auth])
+
+  
 
   if(loadingUser){
     return <p>Carregando...</p>
