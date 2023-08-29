@@ -50,7 +50,7 @@ const GerenciarGame = () => {
             {!evento && <p>Não temos evento </p>}
             
             {evento && evento.participantes.map( (participante) => (
-                <GridGerenciar participante={participante}/>
+                <GridGerenciar participante={participante} key={participante.id}/>
             ))}
         </div>
     </div>
