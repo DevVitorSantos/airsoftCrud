@@ -9,8 +9,8 @@
 }
 
 .nav-container .logo{
-  width: 150px;
-  height: 150px;
+  width: 9em;
+  height: 9em;
   line-height: 150px;
   background-color: transparent;
 }
@@ -52,4 +52,16 @@
 .nav-userImage img{
   width: 100%;
   border-radius: 20px;
+}
+
+/* max device width */
+@media only screen and (max-width: 600px) {
+	.lista {
+		display: none;
+	}
+
+  .nav-container .logo{
+    width: 8em;
+    height: 8em;
+  }
 }

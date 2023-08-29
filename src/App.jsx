@@ -28,6 +28,7 @@ import Search from './pages/Search/Search';
 import ViewGame from './pages/ViewGame/ViewGame';
 import EditGame from './pages/EditGame/EditGame';
 import GerenciarGame from './pages/GerenciarGame/GerenciarGame';
+import MenuBurger from './components/MenuBurger';
 
 
 
@@ -53,6 +54,8 @@ function App() {
        <BrowserRouter>
 
         <NavBar />
+        <MenuBurger />
+        
         <div className="app-container">
           <Routes>
               {/* Public Routes */}

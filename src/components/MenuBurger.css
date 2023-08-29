@@ -1,0 +1,99 @@
+
+
+.menu-ico{
+    display: none;
+    width: 3em;
+    height: 3em;
+    flex: 1;
+    background: url('https://www.svgrepo.com/show/527107/hamburger-menu.svg') no-repeat;
+    background-size: cover;
+    
+    position: relative;
+    top: -111px;
+    right: -311px;
+}
+
+.hamburguer-fechar{
+    display: block;
+    width: 2em;
+    height: 2em;
+    flex: 1;
+    background: #fff url('https://www.svgrepo.com/show/526922/close-square.svg') no-repeat;
+    background-size: cover;
+    margin-left: 90px;
+}
+
+.hamburguer{
+    height: 100vh;
+    width: 13em;
+    background-color:rgb(24, 32, 39);
+    position: fixed;
+    top: 40px;
+    right: -13em;
+    color: #fff;
+}
+
+.hamburguer-open{
+    transition: 0.5s ease-in-out;
+    top: 40px;
+    right: 0px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.lista-burger{
+    
+}
+
+.lista-burger ul{
+    list-style: none;
+}
+
+.lista-burger ul li{
+    
+}
+
+.lista-burger ul li a{
+    width: 100%;
+    height: 50px;
+    display: block;
+    padding: .3em;
+    color:#fff;
+    cursor: pointer;
+}
+
+.menuBurger-userImage{
+   
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 2px;
+  background-color: #ccc;
+  margin-top: 100px;
+  margin-left: 23%;
+  border-radius: 20px;
+}
+
+.menuBurger-userImage img{
+   
+ width: 100%;
+  border-radius: 20px;
+}
+/* 
+
+/* max device width */
+@media only screen and (max-width: 600px) {
+	.menu-ico{
+        display: block;
+    }
+}
