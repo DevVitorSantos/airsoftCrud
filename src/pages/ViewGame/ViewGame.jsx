@@ -100,6 +100,7 @@ const ViewGame = () => {
                                         Nome:
                                         <input type="text" 
                                             name={name} 
+                                            value={user && name}
                                             onChange={(e) => setName(e.target.value)}
                                             placeholder='Digite seu nome'/>
                                     </label>
@@ -107,6 +108,7 @@ const ViewGame = () => {
                                         Email:
                                         <input type="email" 
                                             name={email} 
+                                            value={user && email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             placeholder='Digite seu email'/>
                                     </label>
