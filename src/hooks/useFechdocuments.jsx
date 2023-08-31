@@ -41,7 +41,7 @@ export const useFechdocuments = (docCollection, search = null, uid = null) => {
             where("uid", "==", uid),
             orderBy("createdAt", "desc")
           );
-        } else {
+        } else{
           q = await query(collectionRef, orderBy("createdAt", "desc"));
         }
 

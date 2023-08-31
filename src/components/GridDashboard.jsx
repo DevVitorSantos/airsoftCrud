@@ -1,7 +1,7 @@
 import styles from './GridDashboard.css'
 import { Link  } from 'react-router-dom'
 
-const GridDashboard = ({evento}) => {
+const GridDashboard = ({evento, eventosInscrito}) => {
     return (
         <div className="grid-Dashboard-container">
             <div>
@@ -11,21 +11,43 @@ const GridDashboard = ({evento}) => {
             </div>
             
 
-
+            {eventosInscrito ? 
             <div className='btns'>
-                <Link to={`/eventos/gerenciar/${evento.id} `} className="btn-gerenciar">
-                    
-                </Link>
+
                 
-                <Link to={`/eventos/edit/${evento.id} `} className="btn-editar">
-                    
-                </Link>
+                
                 
                 <Link to={`/eventos/view/${evento.id} `} className="btn-ver">
                     
                 </Link>
+
+               
+                  
                 
             </div>
+
+            :
+            <div className='btns'>
+
+                
+            <Link to={`/eventos/gerenciar/${evento.id} `} className="btn-gerenciar">
+                
+            </Link>
+            
+            <Link to={`/eventos/edit/${evento.id} `} className="btn-editar">
+                
+            </Link>
+            
+            <Link to={`/eventos/view/${evento.id} `} className="btn-ver">
+                
+            </Link>
+
+           
+              
+            
+        </div>
+
+        }
         </div>
     )
 }

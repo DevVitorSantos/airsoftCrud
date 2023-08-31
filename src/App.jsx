@@ -30,6 +30,7 @@ import EditGame from './pages/EditGame/EditGame';
 import GerenciarGame from './pages/GerenciarGame/GerenciarGame';
 import MenuBurger from './components/MenuBurger';
 import MsgAlert from './components/MsgAlert';
+import Tutorial from './pages/Tutorial/Tutorial';
 
 //habilitando o context para usar em msg global
 export const Context = React.createContext()
@@ -71,11 +72,12 @@ function App() {
               <Route path='/sobre' element={<About/>} />
               <Route path="/search" element={<Search />} />
               <Route path="/eventos/view/:id" element={<ViewGame />} />
+              <Route path="/tutorial" element={<Tutorial />} />
               
               {/* Private Routes */}
               <Route 
                 path='/login' 
-                element={!user ? <Login/> : <Navigate to="/dashboard"/>} />
+                element={!user ? <Login/> : <Navigate to="/"/>} />
 
               
 

@@ -127,7 +127,7 @@ const ViewGame = () => {
                                             placeholder='Digite seu email'/>
                                     </label>
 
-                                    <button> Cadastrar no Evento</button>
+                                    {user ? <button> Cadastrar no Evento</button> : <p>Faça login e se inscreva</p> }
                                 </form>
                         </div>
 

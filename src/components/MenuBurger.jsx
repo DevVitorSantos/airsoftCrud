@@ -48,6 +48,14 @@ const MenuBurger = () => {
                             </li>
 
                             <li>
+                                <NavLink to='/tutorial'
+                                    className={( {isActive}) => (isActive ? styles.active : "")}
+                                    onClick={handleOpen}>
+                                    Tutorial
+                                </NavLink>
+                            </li>
+
+                            <li>
                             <NavLink to='/sobre'
                                 className={( {isActive}) => (isActive ? styles.active : "")}
                                 onClick={handleOpen}>
