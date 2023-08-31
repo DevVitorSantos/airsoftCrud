@@ -2,7 +2,7 @@
 import './App.css'
 
 /* Sistem */
-import { useState, useEffect } from 'react';
+import React ,{ useState, useEffect , useContext} from 'react';
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
 
 /* Firebase */
@@ -29,10 +29,13 @@ import ViewGame from './pages/ViewGame/ViewGame';
 import EditGame from './pages/EditGame/EditGame';
 import GerenciarGame from './pages/GerenciarGame/GerenciarGame';
 import MenuBurger from './components/MenuBurger';
+import MsgAlert from './components/MsgAlert';
 
-
+//habilitando o context para usar em msg global
+export const Context = React.createContext()
 
 function App() {
+  const [ msgGlobal, setMsgGlobal ] = useState('')
   const [ user, setUser ] = useState(undefined)
   
   const { auth } = useAutentication()
@@ -54,10 +57,12 @@ function App() {
   return (
     <>
       <AuthProvider value={ {user}}>
+      <Context.Provider value={[ msgGlobal, setMsgGlobal ] }>
        <BrowserRouter>
 
         <NavBar />
         <MenuBurger />
+        <MsgAlert/>
         
         <div className="app-container">
           <Routes>
@@ -94,6 +99,7 @@ function App() {
 
         <Footer/>
        </BrowserRouter>
+       </Context.Provider>
        </AuthProvider>
     </>
   )

@@ -2,7 +2,7 @@
 import styles from './ViewGame.css'
 
 // hooks
-import { useState, useEffect } from "react"
+import React,{ useState, useEffect, useContext } from "react"
 import { useFetchDocument } from "../../hooks/useFechDocument"
 import { useParams,useNavigate } from "react-router-dom"
 import { useUpdateDocument } from '../../hooks/useUpdateDocument'
@@ -11,6 +11,10 @@ import { useAuthValue } from '../../context/AuthContext'
 
 //components
 import Banner from '../../components/Banner';
+
+// msg global setup
+
+import { Context } from '../../App'
 
 
 
@@ -22,6 +26,8 @@ const ViewGame = () => {
     const { id } = useParams();
     const {document: evento} = useFetchDocument("eventosAirsoft", id)
     const { updateDocument, response } = useUpdateDocument("eventosAirsoft")
+    const [msgGlobal, setMsgGlobal]    = useContext(Context)
+
     const navigate = useNavigate()
     
     //console.log('trouxe meu evento' ,  evento)
@@ -62,6 +68,11 @@ const ViewGame = () => {
 
         
         updateDocument(id, data)
+
+        setMsgGlobal({
+            tipo: 'Success',
+            msg: 'Você se inscreveu no evento com sucesso'
+          })
 
         
         

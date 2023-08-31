@@ -1,16 +1,21 @@
 import styles from './EditGame.css'
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuthValue } from '../../context/AuthContext'
 import { useFetchDocument } from '../../hooks/useFechDocument'
 import { useUpdateDocument } from '../../hooks/useUpdateDocument'
 
+  // msg global setup
+
+  import { Context } from '../../App'
 
 
 const EditGame = () => {
     const { id } = useParams()
     const { document: evento } = useFetchDocument( 'eventosAirsoft', id)
     const { updateDocument, response } = useUpdateDocument("eventosAirsoft");
+
+    const [msgGlobal, setMsgGlobal]    = useContext(Context)
 
     //console.log( 'cade nosso evento? ' , evento)
 
@@ -80,6 +85,11 @@ const EditGame = () => {
       }
 
       updateDocument(id, data)
+
+      setMsgGlobal({
+        tipo: 'Success',
+        msg: 'Jogo editado com sucesso'
+      })
 
     // redirect to home page
      navigate("/dashboard");

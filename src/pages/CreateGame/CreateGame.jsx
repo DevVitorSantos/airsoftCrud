@@ -1,10 +1,14 @@
 import styles from './CreateGame.css'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuthValue } from '../../context/AuthContext'
 import { useInsertdocument } from '../../hooks/useInsertDocument'
 import data from './data'
+
+  // msg global setup
+
+import { Context } from '../../App'
 
 const CreateGame = () => {
 
@@ -17,6 +21,8 @@ const CreateGame = () => {
   const [statusEvento, setStatusEvento] = useState("")
   const [tags, setTags] = useState([])
   const [participantes, setParticipantes] = useState([])
+
+  const [msgGlobal, setMsgGlobal]    = useContext(Context)
   
   const [formError, setFormError] = useState("")
 
@@ -61,7 +67,10 @@ const CreateGame = () => {
       tags: tagsArray
     })
 
-    
+    setMsgGlobal({
+      tipo: 'Success',
+      msg: 'Jogo criado com sucesso'
+    })
 
     // redirect to home page
     navigate("/dashboard")
